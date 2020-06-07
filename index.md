@@ -56,16 +56,16 @@ h.264 @ 2500-5000 Kbpsとしてください。
 
 | 出演者名 | Server | Stream Key |
 | --- | --- | --- |
-| DJ Sharpnel | rtmp://huub-rtmp-1.japaneast.cloudapp.azure.com/live | sharpnel |
-| JAKAZiD | rtmp://huub-rtmp.uksouth.cloudapp.azure.com/live | jakazid |
-| goreshit | rtmp://huub-rtmp.uksouth.cloudapp.azure.com/live | goreshit |
-| Othermoon | rtmp://huub-rtmp-2.japaneast.cloudapp.azure.com/live | othermoon |
-| DJ BrainShit | rtmp://huub-rtmp.germanywestcentral.cloudapp.azure.com/live | brainshit |
-| Lolistyle Gabbers | rtmp://huub-rtmp-2.japaneast.cloudapp.azure.com/live | loligabber |
-| 栄免建設 | rtmp://huub-rtmp-1.japaneast.cloudapp.azure.com/live | amen |
-| DENPA-SAMPLER | rtmp://huub-rtmp.koreacentral.cloudapp.azure.com/live | denpa |
-| Takayuki Tomianaga | rtmp://huub-rtmp-3.japaneast.cloudapp.azure.com/live | touka_tt |
-| zukutya | rtmp://huub-rtmp-4.japaneast.cloudapp.azure.com/live | zukutya |
+| DJ Sharpnel | rtmp://huub-rtmp-1.japaneast.cloudapp.azure.com/sharpnel | shrpnl |
+| JAKAZiD | rtmp://huub-rtmp.uksouth.cloudapp.azure.com/jakazid | jkzd |
+| goreshit | rtmp://huub-rtmp.uksouth.cloudapp.azure.com/goreshit | grsht |
+| Othermoon | rtmp://huub-rtmp-2.japaneast.cloudapp.azure.com/othermoon | othrmn |
+| DJ BrainShit | rtmp://huub-rtmp.germanywestcentral.cloudapp.azure.com/brainshit | brnsht |
+| Lolistyle Gabbers | rtmp://huub-rtmp-2.japaneast.cloudapp.azure.com/loligabber | llgbbr |
+| 栄免建設 | rtmp://huub-rtmp-1.japaneast.cloudapp.azure.com/amenkensetsu | amen |
+| DENPA-SAMPLER | rtmp://huub-rtmp.koreacentral.cloudapp.azure.com/denpa | dnp |
+| Takayuki Tomianaga | rtmp://huub-rtmp-3.japaneast.cloudapp.azure.com/tominaga | touka |
+| zukutya | rtmp://huub-rtmp-4.japaneast.cloudapp.azure.com/zukutya | zkty |
 
 ### Output
 
