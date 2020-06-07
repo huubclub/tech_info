@@ -39,7 +39,7 @@ h.264 @ 2500-5000 Kbpsとしてください。
 
 ## OBS設定
 
-> :warning: windowsユーザの方はこれ(64bit)もしくはこれ(32bit)をインストールして、OBSで高音質オーディオエンコーディングを有効にしてください。OBSデフォルトのAACコーデックは品質が悪いです。
+> :warning: windowsユーザの方は[これ(64bit)](https://drive.google.com/file/d/1G8aankChNmFSEukzqDKYlc1RGrLafvLl/view?usp=sharing)もしくは[これ(32bit)](https://drive.google.com/file/d/11_Gtge_nFwZTCap_qB85ey_8VDaXmeMI/view?usp=sharing)をインストールして、OBSで高音質オーディオエンコーディングを有効にしてください。OBSデフォルトのAACコーデックは品質が悪いです。設定は後述します。
 
 > :warning: ストリームの送信ソフトにはOBS StudioとStreamLabs OBSがありますが、StreamLabs OBSではなくOBS Studioを使用してください。StreamLabs OBSはCoreAudioがサポートされておらず品質が良くありません。
 
@@ -52,7 +52,7 @@ h.264 @ 2500-5000 Kbpsとしてください。
 * Server
   * 以下の表を参照してください
 * Stream Key
- * 以下の表を参照してください
+  * 以下の表を参照してください
 
 | 出演者名 | Server | Stream Key |
 | --- | --- | --- |
@@ -79,11 +79,13 @@ h.264 @ 2500-5000 Kbpsとしてください。
 * Encoder
   * Software(x264)
     * もしOBSを起動しているPCにグラフィックボードが搭載されている場合、ハードウェアエンコーダが使えます。ハードウェアエンコードが使える場合は使ってください。
-    * もしMacOSを使っている場合はOutput ModeをAdvanceに変更することで、"Apple VT H264 Hardware Encoder"が使えます。  
+    * **もしMacOSを使っている場合** Output ModeをAdvanceに変更することで、"Apple VT H264 Hardware Encoder"が使えます。  
     ![fig3](https://huubclub.github.io/tech_info/fig3.png)  
     ![fig4](https://huubclub.github.io/tech_info/fig4.png)
 * Audio Bitrate
   * 320Kbps
+
+> :warning: 基本的にはSimple Modeを推奨しますが、もしAdvance Modeを使用する場合、Keyframe Intervalの値を1〜2に設定してください。
 
 ### Audio
 
@@ -106,6 +108,108 @@ h.264 @ 2500-5000 Kbpsとしてください。
   * Lanczos (もしCPU負荷が気になるのであればBicubicかBilinearでも大丈夫)
 * Common FPS Values
   * 30
+
+## Windows向けオーディオコーデック設定
+
+OBSがデフォルトで使用しているffmpegのオーディオコーデックの品質はあまりよくありません。
+Windowsユーザは以下のパッケージをインストールしてください。
+
+* [AppleApplicationSupport.msi(64bit)](https://drive.google.com/file/d/1G8aankChNmFSEukzqDKYlc1RGrLafvLl/view?usp=sharing)
+* [AppleApplicationSupport.msi(32bit)](https://drive.google.com/file/d/11_Gtge_nFwZTCap_qB85ey_8VDaXmeMI/view?usp=sharing)
+
+インストールした後、テストストリームを実行して、OBSのログファイル(OBSのメニューより Help > Log Files > View Current Log から参照できます)を見ると以下のようなログが確認できれば大丈夫です。
+
+```
+15:23:14.514: [CoreAudio AAC: 'avc_aac_stream']: settings:
+15:23:14.514:     mode:          AAC
+15:23:14.514:     bitrate:       320
+15:23:14.514:     sample rate:   48000
+15:23:14.514:     cbr:           on
+15:23:14.514:     output buffer: 1536
+```
+
+もし、上記のようなログが出力されず、代わりに'acc' (ffmpeg_aac) というようなログが出力されている場合は、何か設定に誤りがありますので確認してみてください。
+
+## Server
+
+DJ/VJの方は以下のいずれかのRTMPサーバに対してストリーミングします。rtmpサーバは東日本、イギリス、ドイツ、韓国に設置しますので、自宅から近いサーバを選んでストリーミングします。
+
+| サーバ名 | RTMPサーバアドレス | 用途 |
+| --- | --- | --- |
+| JP#1 | rtmp://huub-rtmp-1.japaneast.cloudapp.azure.com [(SpeedTest)](http://huub-rtmp-1.japaneast.cloudapp.azure.com) | DJ -> VJ Relay |
+| JP#2 | rtmp://huub-rtmp-2.japaneast.cloudapp.azure.com [(SpeedTest)](http://huub-rtmp-2.japaneast.cloudapp.azure.com) | DJ -> VJ Relay |
+| JP#3 | rtmp://huub-rtmp-3.japaneast.cloudapp.azure.com [(SpeedTest)](http://huub-rtmp-3.japaneast.cloudapp.azure.com) | VJ -> BroadcastServer Relay |
+| JP#4 | rtmp://huub-rtmp-4.japaneast.cloudapp.azure.com [(SpeedTest)](http://huub-rtmp-4.japaneast.cloudapp.azure.com) | VJ -> BroadcastServer Relay |
+| UK | rtmp://huub-rtmp.uksouth.cloudapp.azure.com [(SpeedTest)](http://huub-rtmp.uksouth.cloudapp.azure.com) | DJ -> VJ Relay |
+| DE | rtmp://huub-rtmp.germanywestcentral.cloudapp.azure.com [(SpeedTest)](http://huub-rtmp.germanywestcentral.cloudapp.azure.com) | DJ -> VJ Relay |
+| KR | rtmp://huub-rtmp.koreacentral.cloudapp.azure.com [(SpeedTest)](http://huub-rtmp.koreacentral.cloudapp.azure.com) | DJ -> VJ Relay |
+
+DJの方は"DJ -> VJ Relay"のサーバに対してStreamを送信し、VJの方は"VJ -> BroadcastServer Relay"のサーバに対してStreamを送信します。
+
+各サーバにはSpeedTestを実装してありますので、あらかじめ、配信環境からSpeedTestを実行し、最低でも20mbps以上の安定した速度が出ることを確認してください。
+
+OBSを利用してストリームを送信する場合は以下のように設定します。
+
+* Server
+  * rtmp://{RTMPサーバのアドレス}/live
+* Stream Key
+  * 任意の文字列
+
+RTMPサーバからストリームを受信する場合は以下のアドレスから取得できます。
+
+* rtmp://{RTMPサーバのアドレス}/live/{送信時に設定したStream Keyの値}
+
+## Serverの利用ルール
+
+* イベントの前まで土日はサーバを立ち上げっぱなしにしますので、自由にストリーミングをテストすることができます。
+  * もしサーバに繋がらない場合はサーバが停止している可能性が高いので、Discordで@touka_ttまで連絡ください。すぐに起動できます。土日以外に確認したい場合も連絡ください。
+* イベント期間中でも時々ストリームをテストすることができますが、自分の枠でない場合は前に何時間もストリームを流しっぱなしにしないようにしてください。
+* 最終的なストリームは、自分より前のDJのパフォーマンス開始と同時に開始することができます。
+  * 例えばDJ Sharpnelのライブが14:00-14:45、goreshitのライブが14:45-15:30、Othermoonのライブが15:30-16:15というタイムテーブルの場合、goreshitは14:45からの本番に備えて14:00よりストリーミングを開始し、14:45のライブ開始までストリーミングを続けることができます（コンテンツ/テストは何でも構いません）。  
+  同様にOthermoonも15:30からのライブストリームに備えて14:45からストリームの送信が可能になります。
+* 最終チェックのため可能であれば予定時間の15分前までにストリーミングを開始してください。
+
+## Streamのテスト
+
+割り当てられたサーバとストリームキーを使用して、イベントの前の土日はいつでもサーバへのストリーム配信を可能にします。
+送信したストリームは各種メディアプレイヤーを使用すると自分のストリームを受信できます。
+
+* RTMPストリームを再生できるメディアプレイヤー
+  * VLC (Windows or Linux or MacOS)
+  * IINA (MacOS)
+
+例えばrtmp://huub-rtmp-1.japaneast.cloudapp.azure.com/liveに対して"sample-streamkey"というStreamKeyを設定してストリーム送信した場合、VLCであれば`ファイル > ネットワークを開く`からURLを以下のように設定すると、自分が送信したストリームを確認できます。
+
+![fig7](https://huubclub.github.io/tech_info/fig7.png)
+
+IINAの場合も`ファイル > URLから開く`から同様に設定することで、自分が送信したストリームを確認出来ます。
+
+![fig8](https://huubclub.github.io/tech_info/fig8.png)
+
+## Content
+
+DJは最低限Liveパフォーマンスの音源だけ送っていただければ大丈夫です。（つまり画面は黒一色でOK）
+もし、Webカメラ等でDJパフォーマンスの様子を撮影できるのであればベターですが、
+これは必須ではありません。
+もしパフォーマンスの様子を一緒に送る場合は、Discordで事前に連携してください。
+視聴者に最も優先して届くべきものは音楽で、演出は二の次だと言うことを忘れないでください。
+
+## DJの交代
+
+DJの交代の間に簡単なDJ交代用のスプラッシュスクリーンを出して交代します。
+DJの交代は@touka_ttと@zktyがDiscordで指示します。
+イベント期間中は常にDiscordの連絡を見ることが出来る状態にしておいてください。
+
+> :warning: Twitchの配信にはラグがあります。くれぐれもTwitchのストリームを見てタイミングを合わせようとしないでください。
+
+1. 前のDJのパフォーマンスが終了すると同時にフェードアウト。
+1. スプラッシュスクリーンをフェードイン。
+1. VJがDJに対して音源の送信を指示し、DJがパフォーマンスを開始
+1. DJのパフォーマンスを受けてVJがパフォーマンスを開始
+1. VJのストリームの受信をもって、スプラッシュスクリーンをフェードアウト
+
+DJ -> VJ間、そしてVJ -> Broadcast Server間に通信ラグがある関係で、
+どうしてもイントロに派手なビジュアルを送信したり、重要なMCを入れたりすることは難しいです。この点は予め認識しておいてください。
 
 
 ## Special Thanks
