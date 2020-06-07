@@ -56,16 +56,16 @@ h.264 @ 2500-5000 Kbpsとしてください。
 
 | 出演者名 | Server | Stream Key |
 | --- | --- | --- |
-| DJ Sharpnel | rtmp://~~~~~~~~ | ~~~~~~~ |
-| JAKAZiD | rtmp://~~~~~~~~ | ~~~~~~~ |
-| goreshit | rtmp://~~~~~~~~ | ~~~~~~~ |
-| Othermoon | rtmp://~~~~~~~~ | ~~~~~~~ |
-| DJ BrainShit | rtmp://~~~~~~~~ | ~~~~~~~ |
-| Lolistyle Gabbers | rtmp://~~~~~~~~ | ~~~~~~~ |
-| 栄免建設 | rtmp://~~~~~~~~ | ~~~~~~~ |
-| DENPA-SAMPLER | rtmp://~~~~~~~~ | ~~~~~~~ |
-| Takayuki Tomianaga | rtmp://~~~~~~~~ | ~~~~~~~ |
-| zukutya | rtmp://~~~~~~~~ | ~~~~~~~ |
+| DJ Sharpnel | rtmp://huub-rtmp-1.japaneast.cloudapp.azure.com/live | sharpnel |
+| JAKAZiD | rtmp://huub-rtmp.uksouth.cloudapp.azure.com/live | jakazid |
+| goreshit | rtmp://huub-rtmp.uksouth.cloudapp.azure.com/live | goreshit |
+| Othermoon | rtmp://huub-rtmp-2.japaneast.cloudapp.azure.com/live | othermoon |
+| DJ BrainShit | rtmp://huub-rtmp.germanywestcentral.cloudapp.azure.com/live | brainshit |
+| Lolistyle Gabbers | rtmp://huub-rtmp-2.japaneast.cloudapp.azure.com/live | loligabber |
+| 栄免建設 | rtmp://huub-rtmp-1.japaneast.cloudapp.azure.com/live | amen |
+| DENPA-SAMPLER | rtmp://huub-rtmp.koreacentral.cloudapp.azure.com/live | denpa |
+| Takayuki Tomianaga | rtmp://huub-rtmp-3.japaneast.cloudapp.azure.com/live | touka_tt |
+| zukutya | rtmp://huub-rtmp-4.japaneast.cloudapp.azure.com/live | zukutya |
 
 ### Output
 
