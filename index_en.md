@@ -79,7 +79,7 @@ Set it to 320kbps AAC Stereo 48kHz. (44.1 kHz is fine.)
 * Encoder.
   * Software(x264)
     * If your PC is equipped with a graphics board, you can use the hardware You can use the encoder. If you can use hardware encoding, use it.
-    * If you can use hardware encoding, use it. You can use "Apple VT H264 Hardware Encoder".  
+    * **If you're using MacOS** If you can use hardware encoding, use it. You can use "Apple VT H264 Hardware Encoder".  
     ![fig3](https://huubclub.github.io/tech_info/fig3.png)  
     ![fig4](https://huubclub.github.io/tech_info/fig4.png)
 * Audio Bitrate
@@ -159,7 +159,7 @@ If you want to receive a stream from the RTMP server, you can get it from the fo
 
 * rtmp://{address of the RTMP server}/live/{Stream set at the time of sending Key value}
 
-## Server Usage Rules.
+## Server Usage Rules
 
 * We will keep the server up on Saturdays and Sundays until before the event so you can test the streaming at your leisure.
   * If you can't connect to the server, it's likely the server is down and you can use Discord to @ Please contact touka_tt. We'll get you up and running in no time. If you want to check outside of Saturday and Sunday, please contact me as well.
