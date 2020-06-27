@@ -211,6 +211,24 @@ DJの交代は@touka_ttと@zktyがDiscordで指示します。
 DJ -> VJ間、そしてVJ -> Broadcast Server間に通信ラグがある関係で、
 どうしてもイントロに派手なビジュアルを送信したり、重要なMCを入れたりすることは難しいです。この点は予め認識しておいてください。
 
+## DJ出力の取り込み
+
+DJの音をどのように取り込むかは各々の環境によるので一概に言えないのですが、一番簡単なのは仮想オーディオデバイスを使用する方法です。
+Macの場合はSoundFlowerを使用します。Windowsの場合はVB-CABLEのようなソフトを使います。
+
+以下はMacのSoundFlowerとRekordboxを使用した例です。
+
+1. Soundflowerをダウンロードし、インストールする。リンク先のドキュメントにあるとおり、セキュリティ警告がでて一回目のインストールは必ず失敗するので、気にしないこと。詳しくはリンク先を読んでください。  
+[https://github.com/mattingalls/Soundflower/releases/tag/2.0b2](https://github.com/mattingalls/Soundflower/releases/tag/2.0b2)
+1. Rekordboxのオーディオ出力をSoundflower(2ch)に変更する。  
+![fig9](https://huubclub.github.io/tech_info/fig8.png)
+1. OBSのSourceより新規AudioInputCaptureを作成。名前はSoundflowerを設定。デバイスはSoundflower(2ch)を選択。  
+![fig10](https://huubclub.github.io/tech_info/fig10.png)  
+![fig11](https://huubclub.github.io/tech_info/fig11.png)  
+![fig12](https://huubclub.github.io/tech_info/fig12.png)  
+
+
+
 
 ## Special Thanks
 marcan & AnimeltUp!Crew
