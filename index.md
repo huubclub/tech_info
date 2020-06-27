@@ -13,7 +13,7 @@ OBSで入力元のストリームを切り替えながらTwitchにストリー�
 
 もし、DJが専属のVJを付けて映像付きで参加する場合は、事前に専用のサーバを用意しますので、事前にお知らせください。
 
-![HuubDiagram](https://huubclub.github.io/tech_info/HuubDiagram.png)
+![HuubDiagram](https://github.com/huubclub/tech_info/raw/master/HuubDiagram.png)
 
 Discordでストリームの調整を行います。
 招待はTakayuki Tominagaが行っておりますので、イベント参加者はDiscordに参加をお願いします。
@@ -45,7 +45,7 @@ h.264 @ 2500-5000 Kbpsとしてください。
 
 ### Stream
 
-![fig1](https://huubclub.github.io/tech_info/fig1.png)
+![fig1](https://github.com/huubclub/tech_info/raw/master/fig1.png)
 
 * Service
   * Custom
@@ -69,7 +69,7 @@ h.264 @ 2500-5000 Kbpsとしてください。
 
 ### Output
 
-![fig2](https://huubclub.github.io/tech_info/fig2.png)
+![fig2](https://github.com/huubclub/tech_info/raw/master/fig2.png)
 
 * Output Mode
   * Simple
@@ -80,8 +80,8 @@ h.264 @ 2500-5000 Kbpsとしてください。
   * Software(x264)
     * もしOBSを起動しているPCにグラフィックボードが搭載されている場合、ハードウェアエンコーダが使えます。ハードウェアエンコードが使える場合は使ってください。
     * **もしMacOSを使っている場合** Output ModeをAdvanceに変更することで、"Apple VT H264 Hardware Encoder"が使えます。  
-    ![fig3](https://huubclub.github.io/tech_info/fig3.png)  
-    ![fig4](https://huubclub.github.io/tech_info/fig4.png)
+    ![fig3](https://github.com/huubclub/tech_info/raw/master/fig3.png)  
+    ![fig4](https://github.com/huubclub/tech_info/raw/master/fig4.png)
 * Audio Bitrate
   * 320Kbps
 
@@ -89,7 +89,7 @@ h.264 @ 2500-5000 Kbpsとしてください。
 
 ### Audio
 
-![fig5](https://huubclub.github.io/tech_info/fig5.png)
+![fig5](https://github.com/huubclub/tech_info/raw/master/fig5.png)
 
 * Sample Rate
   * 48 KHz もしくは 44.1 KHz
@@ -98,7 +98,7 @@ h.264 @ 2500-5000 Kbpsとしてください。
 
 ### Video
 
-![fig6](https://huubclub.github.io/tech_info/fig6.png)
+![fig6](https://github.com/huubclub/tech_info/raw/master/fig6.png)
 
 * Base (Canvas) Resolution
   * 1280x720
@@ -180,11 +180,11 @@ RTMPサーバからストリームを受信する場合は以下のアドレス�
 
 例えばrtmp://huub-rtmp-1.japaneast.cloudapp.azure.com/liveに対して"sample-streamkey"というStreamKeyを設定してストリーム送信した場合、VLCであれば`ファイル > ネットワークを開く`からURLを以下のように設定すると、自分が送信したストリームを確認できます。
 
-![fig7](https://huubclub.github.io/tech_info/fig7.png)
+![fig7](https://github.com/huubclub/tech_info/raw/master/fig7.png)
 
 IINAの場合も`ファイル > URLから開く`から同様に設定することで、自分が送信したストリームを確認出来ます。
 
-![fig8](https://huubclub.github.io/tech_info/fig8.png)
+![fig8](https://github.com/huubclub/tech_info/raw/master/fig8.png)
 
 ## Content
 
@@ -211,9 +211,9 @@ DJの交代は@touka_ttと@zktyがDiscordで指示します。
 DJ -> VJ間、そしてVJ -> Broadcast Server間に通信ラグがある関係で、
 どうしてもイントロに派手なビジュアルを送信したり、重要なMCを入れたりすることは難しいです。この点は予め認識しておいてください。
 
-## DJ出力の取り込み
+## DJ出力の取り込み（おまけ）
 
-DJの音をどのように取り込むかは各々の環境によるので一概に言えないのですが、一番簡単なのは仮想オーディオデバイスを使用する方法です。
+DJの音をどのように取り込むかは各々の環境によるので一概に言えないのですが、一例として仮想オーディオデバイスを使用する方法を挙げます。
 Macの場合はSoundFlowerを使用します。Windowsの場合はVB-CABLEのようなソフトを使います。
 
 以下はMacのSoundFlowerとRekordboxを使用した例です。
@@ -221,13 +221,13 @@ Macの場合はSoundFlowerを使用します。Windowsの場合はVB-CABLEのよ
 1. Soundflowerをダウンロードし、インストールする。リンク先のドキュメントにあるとおり、セキュリティ警告がでて一回目のインストールは必ず失敗するので、気にしないこと。詳しくはリンク先を読んでください。  
 [https://github.com/mattingalls/Soundflower/releases/tag/2.0b2](https://github.com/mattingalls/Soundflower/releases/tag/2.0b2)
 1. Rekordboxのオーディオ出力をSoundflower(2ch)に変更する。  
-![fig9](https://huubclub.github.io/tech_info/fig9.png)
+![fig9](https://github.com/huubclub/tech_info/raw/master/fig9.png)
 1. OBSのSourceより新規AudioInputCaptureを作成。名前はSoundflowerを設定。デバイスはSoundflower(2ch)を選択。  
-![fig10](https://huubclub.github.io/tech_info/fig10.png)  
-![fig11](https://huubclub.github.io/tech_info/fig11.png)  
-![fig12](https://huubclub.github.io/tech_info/fig12.png)  
+![fig10](https://github.com/huubclub/tech_info/raw/master/fig10.png)  
+![fig11](https://github.com/huubclub/tech_info/raw/master/fig11.png)  
+![fig12](https://github.com/huubclub/tech_info/raw/master/fig12.png)  
 1. DJしたら音がOBSに取り込まれているようになる
-![fig13](https://huubclub.github.io/tech_info/fig13.png)  
+![fig13](https://github.com/huubclub/tech_info/raw/master/fig13.png)  
 
 
 ## Special Thanks

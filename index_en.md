@@ -13,7 +13,7 @@ The OBS will be used to stream to Twitch, switching between the source streams.
 
 If you want to have a DJ with a dedicated VJ and video, you'll need to set up a dedicated server in advance. so please let us know in advance.
 
-![HuubDiagram](https://huubclub.github.io/tech_info/HuubDiagram.png)
+![HuubDiagram](https://github.com/huubclub/tech_info/raw/master/HuubDiagram.png)
 
 We will coordinate the stream in Discord.
 Invited by Takayuki Tominaga, event attendees are invited to attend Please join Discord.
@@ -45,7 +45,7 @@ Set it to 320kbps AAC Stereo 48kHz. (44.1 kHz is fine.)
 
 ### Stream
 
-![fig1](https://huubclub.github.io/tech_info/fig1.png)
+![fig1](https://github.com/huubclub/tech_info/raw/master/fig1.png)
 
 * Service
   * Custom
@@ -69,7 +69,7 @@ Set it to 320kbps AAC Stereo 48kHz. (44.1 kHz is fine.)
 
 ### Output
 
-![fig2](https://huubclub.github.io/tech_info/fig2.png)
+![fig2](https://github.com/huubclub/tech_info/raw/master/fig2.png)
 
 * Output Mode
   * Simple
@@ -80,8 +80,8 @@ Set it to 320kbps AAC Stereo 48kHz. (44.1 kHz is fine.)
   * Software(x264)
     * If your PC is equipped with a graphics board, you can use the hardware You can use the encoder. If you can use hardware encoding, use it.
     * **If you're using MacOS** If you can use hardware encoding, use it. You can use "Apple VT H264 Hardware Encoder".  
-    ![fig3](https://huubclub.github.io/tech_info/fig3.png)  
-    ![fig4](https://huubclub.github.io/tech_info/fig4.png)
+    ![fig3](https://github.com/huubclub/tech_info/raw/master/fig3.png)  
+    ![fig4](https://github.com/huubclub/tech_info/raw/master/fig4.png)
 * Audio Bitrate
   * 320Kbps
 
@@ -89,7 +89,7 @@ Set it to 320kbps AAC Stereo 48kHz. (44.1 kHz is fine.)
 
 ### Audio
 
-![fig5](https://huubclub.github.io/tech_info/fig5.png)
+![fig5](https://github.com/huubclub/tech_info/raw/master/fig5.png)
 
 * Sample Rate
   * 48 KHz or 44.1 KHz
@@ -98,7 +98,7 @@ Set it to 320kbps AAC Stereo 48kHz. (44.1 kHz is fine.)
 
 ### Video
 
-![fig6](https://huubclub.github.io/tech_info/fig6.png)
+![fig6](https://github.com/huubclub/tech_info/raw/master/fig6.png)
 
 * Base (Canvas) Resolution
   * 1280x720
@@ -180,11 +180,11 @@ You can receive your own stream when you send it using various media players.
 
 For example, you can use "sample-streamkey" for rtmp://huub-rtmp-1.japaneast.cloudapp. For example, if you set "sample-streamkey" for azure.com/live If you set up a StreamKey and streamed, you can use the `File > Open Network` as follows, you can check the stream you sent You can.
 
-![fig7](https://huubclub.github.io/tech_info/fig7.png)
+![fig7](https://github.com/huubclub/tech_info/raw/master/fig7.png)
 
 In the case of IINA, you can do the same thing by going to `File > Open from URL` and setting up your own You can check the stream.
 
-![fig8](https://huubclub.github.io/tech_info/fig8.png)
+![fig8](https://github.com/huubclub/tech_info/raw/master/fig8.png)
 
 ## Content
 
