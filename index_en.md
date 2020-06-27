@@ -1,6 +1,6 @@
 # Huub tech info
 
-Last update: 2020/06/20
+Last update: 2020/06/28
 
 # Abstract
 
