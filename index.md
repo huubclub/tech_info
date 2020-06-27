@@ -226,8 +226,8 @@ Macの場合はSoundFlowerを使用します。Windowsの場合はVB-CABLEのよ
 ![fig10](https://huubclub.github.io/tech_info/fig10.png)  
 ![fig11](https://huubclub.github.io/tech_info/fig11.png)  
 ![fig12](https://huubclub.github.io/tech_info/fig12.png)  
-
-
+1. DJしたら音がOBSに取り込まれているようになる
+![fig13](https://huubclub.github.io/tech_info/fig13.png)  
 
 
 ## Special Thanks
