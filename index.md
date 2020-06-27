@@ -230,7 +230,7 @@ Macの場合はSoundFlowerを使用します。Windowsの場合はVB-CABLEのよ
 ![fig13](https://github.com/huubclub/tech_info/raw/master/fig13.png)  
 
 この方法はPC内部で再生されている音をOBSに取り込む方法ですが、例えばオーディオインタフェースを使用する方法も基本的には同じです。
-新規Audio Input Caputerを使用して、Deviceを選択するところで使用するオーディオインタフェースを選択するとOBSに音が取り込めます。
+手順1，2を飛ばして、手順3で新規Audio Input Caputerを使用して、Deviceを選択するところで使用するオーディオインタフェースを選択するとOBSに音が取り込めます。
 
 ## Special Thanks
 marcan & AnimeltUp!Crew
