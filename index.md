@@ -221,7 +221,7 @@ Macの場合はSoundFlowerを使用します。Windowsの場合はVB-CABLEのよ
 1. Soundflowerをダウンロードし、インストールする。リンク先のドキュメントにあるとおり、セキュリティ警告がでて一回目のインストールは必ず失敗するので、気にしないこと。詳しくはリンク先を読んでください。  
 [https://github.com/mattingalls/Soundflower/releases/tag/2.0b2](https://github.com/mattingalls/Soundflower/releases/tag/2.0b2)
 1. Rekordboxのオーディオ出力をSoundflower(2ch)に変更する。  
-![fig9](https://huubclub.github.io/tech_info/fig8.png)
+![fig9](https://huubclub.github.io/tech_info/fig9.png)
 1. OBSのSourceより新規AudioInputCaptureを作成。名前はSoundflowerを設定。デバイスはSoundflower(2ch)を選択。  
 ![fig10](https://huubclub.github.io/tech_info/fig10.png)  
 ![fig11](https://huubclub.github.io/tech_info/fig11.png)  
