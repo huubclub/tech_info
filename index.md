@@ -218,6 +218,10 @@ Macの場合はSoundFlowerを使用します。Windowsの場合はVB-CABLEのよ
 
 以下はMacのSoundFlowerとRekordboxを使用した例です。
 
+> :warning: この方法はPC内部で再生されている音をOBSに取り込む方法ですが、実物のオーディオインタフェースを使用する方法も基本的には同じです。
+手順1，2を飛ばして、手順3で新規Audio Input Captureを作成するところで使用するオーディオインタフェースを選択するとOBSに音が取り込めます。  
+DJコントローラーによってはオーディオインタフェースを内蔵している機種もあるので、そのようなコントローラを使用している場合は、OBSのキャプチャデバイスとしてコントローラー内蔵のインタフェースを指定すると良いでしょう。
+
 1. Soundflowerをダウンロードし、インストールする。リンク先のドキュメントにあるとおり、セキュリティ警告がでて一回目のインストールは必ず失敗するので、気にしないこと。詳しくはリンク先を読んでください。  
 [https://github.com/mattingalls/Soundflower/releases/tag/2.0b2](https://github.com/mattingalls/Soundflower/releases/tag/2.0b2)
 1. Rekordboxのオーディオ出力をSoundflower(2ch)に変更する。  
@@ -228,10 +232,6 @@ Macの場合はSoundFlowerを使用します。Windowsの場合はVB-CABLEのよ
 ![fig12](https://github.com/huubclub/tech_info/raw/master/fig12.png)  
 1. DJしたら音がOBSに取り込まれているようになる
 ![fig13](https://github.com/huubclub/tech_info/raw/master/fig13.png)  
-
-この方法はPC内部で再生されている音をOBSに取り込む方法ですが、実物のオーディオインタフェースを使用する方法も基本的には同じです。
-手順1，2を飛ばして、手順3で新規Audio Input Captureを作成するところで使用するオーディオインタフェースを選択するとOBSに音が取り込めます。  
-DJコントローラーによってはオーディオインタフェースを内蔵している機種もあるので、そのようなコントローラを使用している場合は、OBSのキャプチャデバイスとしてコントローラー内蔵のインタフェースを指定すると良いでしょう。
 
 ## Special Thanks
 marcan & AnimeltUp!Crew
