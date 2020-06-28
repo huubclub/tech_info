@@ -221,7 +221,8 @@ Here's an example of using SoundFlower and Rekordbox on a Mac.
 
 > :warning: This method captures the sound playing inside the PC with OBS, but the method using the physical audio interface is basically the same.  
 If you skip steps 1 and 2 and select the audio interface you want to use when you create a new Audio Input Capture in step 3, you can capture the sound in OBS.  
-Some DJ controllers have a built-in audio interface, so if you are using such a controller, you should specify the controller's built-in interface as the capture device for OBS.
+Some DJ controllers have a built-in audio interface, so if you are using such a controller, you should specify the controller's built-in interface as the capture device for OBS.  
+Even entry-level products like the DDJ-SB3 have a built-in audio interface. So, in most cases, you should be able to start with step 3 below.
 
 1. Download and install Soundflower. As shown in the document of the link, a security warning is given and the first installation is always Don't worry about it, because it will fail. Read the link for more information.  
 [https://github.com/mattingalls/Soundflower/releases/tag/2.0b2](https://github.com/mattingalls/Soundflower/releases/tag/2.0b2)
